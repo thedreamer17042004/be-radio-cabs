@@ -65,7 +65,7 @@ builder.Services.AddScoped(typeof(ICommonService<>), typeof(CommonService<>));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
+app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
